@@ -1,0 +1,121 @@
+//  =============================
+//  @author: nChauhan
+//  @description: Banks Animal Hospital
+//  @package: Main Stylesheet.
+//  =============================
+//  ======================================================================
+//  ++++++++++++++++++++++++++++++ Include files Here ++++++++++++++++++++
+//  ======================================================================
+//  Import custom defined variables
+@import "partials/variables";
+//  Import custom defined mixins
+@import "partials/mixins";
+//  Import bootstrap variables
+@import "partials/imports";
+
+// ==============
+// Base Elements
+// ==============
+
+html, body {
+  height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  font-family: $font-primary;
+}
+
+body {
+  background-color: $grey;
+  min-width: $site-min-width;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+// site width
+.application-container {
+  margin: 0 auto;
+  max-width: $site-max-width;
+
+  // Hide .row scroll
+  overflow-x: hidden;
+}
+
+// content-container for padded sides
+.content-container {
+  padding-left: 35px;
+  padding-right: 35px;
+
+  // phone
+  @include phone {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  // tab portrait
+  @include tablet--portrait {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// CMS page container
+.page {
+  // Main content wrapper for inner templates
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    background: $grey;
+
+    padding: 3em 0;
+    margin: 35px auto;
+
+    // phone
+    @include below--tablet {
+      max-width: 100%;
+      padding: 2em;
+    }
+  }
+
+  // inner container
+  &__inner-container {
+    width: 100%;
+    max-width: 65%;
+
+    margin: 0 auto;
+
+    // phone
+    @include phone {
+      max-width: 100%;
+    }
+
+    // tab portrait
+    @include tablet--portrait {
+      max-width: 100%;
+    }
+  }
+}
+
+// ==============
+// Custom styles
+// ==============
+@import "partials/_mmenu.scss";
+@import "partials/custom-styles";
+
+// ==============
+// Helper Classes
+// ==============
+.block {
+  float: left;
+  width: 100%;
+}
+
+// Spacing mixin
+@include spacing-helpers();
+
+// theme color classes
+@include color-helpers();

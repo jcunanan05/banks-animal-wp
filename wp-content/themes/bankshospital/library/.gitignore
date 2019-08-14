@@ -1,0 +1,4 @@
+#ignore compilation files
+node_modules
+.sass-cache
+dist/css/style.min.css.map

@@ -1,0 +1,31 @@
+//  =================================
+//  @author: nChauhan
+//  @package: Define variables here.
+//  =================================
+
+
+//  =====================================================================================
+//  ++++++++++++++++++++++++++++++++ Main variables +++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+    $site-max-width:    1920px; 			//  Control width of the application from here.
+    $site-min-width:    300px; 			    //  Control width of the application from here.
+
+//  =====================================================================================
+//  ++++++++++++++++++++++++++++++++ Color variables ++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+    $primary-color:         lighten(#a98b28, 10%);		//  Define primary color of application here
+    $blue:                  #28aebd;	    //  Define secondary color of application here
+
+    $white:                 #ffffff;		//  Basic color for mixins
+    $black:                 #000000;		//  Basic color for mixins
+    $grey:                  #F5F5F5;
+
+    $primary-text-color:    #373736;        // Primary text color
+
+//  =====================================================================================
+//  +++++++++++++++++++++++++++++++++ Font families +++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+    $font-primary: 'Roboto Slab', serif;
+    $font-secondary: 'Roboto', sans-serif;		

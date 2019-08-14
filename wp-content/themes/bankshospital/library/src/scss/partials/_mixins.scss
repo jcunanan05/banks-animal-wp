@@ -1,0 +1,134 @@
+//  =================================
+//  @author: nChauhan
+//  @package: Application helper mixins
+//  =================================
+
+//  =======================================
+//  ++++++ Margin & padding Mixin +++++++++
+//  =======================================
+
+    // Unit values
+    $units: (0, 5, 10, 15, 20, 30, 35, 40, 60);
+
+    @mixin spacing-helpers() {    //  Generate margin classes
+      @each $value in $units {
+
+        // bottom margins
+        .bm#{$value} {
+          margin-bottom: #{$value}px;
+        }
+
+        // Top margins
+        .tm#{$value} {
+          margin-top: #{$value}px;
+        }
+
+        // Horizontal padding
+        .ph#{$value} {
+          padding-left: #{$value}px;
+          padding-right: #{$value}px;
+        }
+
+        // vertical padding
+        .pv#{$value} {
+          padding-top: #{$value}px;
+          padding-bottom: #{$value}px;
+        }
+
+        // bottom padding
+        .pb#{$value} {
+          padding-bottom: #{$value}px;
+        }
+
+        // margin right
+        .mr#{$value} {
+          margin-right: #{$value}px;
+        }
+
+        // margin left
+        .ml#{$value} {
+          margin-left: #{$value}px;
+        }
+
+      }
+    }
+
+
+//  =======================================
+//  ++++++++++++++ Colors +++++++++++++++++
+//  =======================================
+
+    // Color loops
+    $notation: ".";
+    $colors: (
+            "primary": $primary-color,
+            "white": $white,
+            "black": $black,
+            "grey": $grey,
+    );
+
+    @mixin color-helpers () {
+      @each $name, $hash in $colors {
+        // Background colors
+        .#{$name}-bg {
+          background-color: #{$hash};
+        }
+
+        // Text Color
+        .#{$name}-cl {
+          color: #{$hash};
+        }
+      }
+    }
+//  =======================================
+//  ++++++++++ Media queries ++++++++++++++
+//  =======================================
+
+    // for mobile phones
+    @mixin small--phone {
+      @media (max-width: ($screen-xs)) { // max 480
+        @content;
+      }
+    }
+
+    // for mobile phones
+    @mixin phone {
+      @media (max-width: ($screen-sm - 1)) { // max 767
+        @content;
+      }
+    }
+
+    // above mobile phones
+    @mixin above--phone {
+      @media (min-width: ($screen-sm)) { // min 768
+        @content;
+      }
+    }
+
+    // max tablet
+    @mixin tablet {
+      @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) { // 768 to 1024
+        @content;
+      }
+    }
+
+    // max tablet
+    @mixin tablet--portrait {
+      @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) and (orientation: portrait) { // 768 to 1024
+        @content;
+      }
+    }
+
+    // max tablet
+    @mixin below--tablet {
+      @media (max-width: ($screen-md)) { // under 1024
+        @content;
+      }
+    }
+
+    // for ie10
+    @mixin ie10 {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+      }
+    }

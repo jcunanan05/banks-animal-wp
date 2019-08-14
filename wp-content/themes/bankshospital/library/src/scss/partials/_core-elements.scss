@@ -1,0 +1,20 @@
+//  =================================
+//  xxxxxxxx Table styling xxxxxxxxxx
+//  =================================
+
+// Typography
+p {
+  font-size: 16px;
+  font-family: $font-secondary;
+
+  color: $primary-text-color;
+  margin-bottom: 20px;
+}
+
+// for IE 10 hack
+span {
+  // IE10 hack
+  @include ie10 {
+    display: inline-block;
+  }
+}
