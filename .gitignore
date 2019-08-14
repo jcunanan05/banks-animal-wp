@@ -121,15 +121,33 @@ typings/
 .dynamodb/
 
 ### WordPress ###
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
+# go daddy config
+gd-config.php
+
+# from stackoverflow 
+# https://stackoverflow.com/questions/13606938/what-will-be-the-most-suitable-settings-in-gitignore-file-for-wordpress-project
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-config.php
 wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
 !wp-content/themes/
+!wp-content/plugins/
+sitemap.xml
+*.log
+sitemap.xml
+sitemap.xml.gz
 
 # ignore these plugins
 wp-content/plugins/hello.php
